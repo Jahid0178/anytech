@@ -23,7 +23,7 @@ const Button = ({
     "inline-flex items-center justify-center gap-2 rounded font-medium transition-colors group";
 
   const variantStyles = {
-    primary: "bg-blue-500 text-white hover:bg-blue-600",
+    primary: "bg-orange-500 text-white hover:bg-orange-600",
     secondary: "bg-gray-200 text-gray-800 hover:bg-gray-300",
     outline:
       "border-2 border-white text-white hover:text-blue-500 hover:bg-white",
@@ -32,7 +32,7 @@ const Button = ({
   const sizeStyles = {
     sm: "px-3 py-1.5 text-sm",
     md: "px-4 py-2 text-base",
-    lg: "px-3 py-2.5 lg:px-6 lg:py-3 text-lg",
+    lg: "px-3 py-2.5 lg:px-6 lg:py-3 text-lg font-semibold",
   };
 
   const styles = [
@@ -52,7 +52,10 @@ const Button = ({
           <ChevronRightIcon className="translate-x-0 group-hover:translate-x-2 transition-all" />
         </Link>
       ) : (
-        <button className={styles}>{children}</button>
+        <button className={styles}>
+          {children}{" "}
+          <ChevronRightIcon className="translate-x-0 group-hover:translate-x-2 transition-all" />
+        </button>
       )}
     </>
   );

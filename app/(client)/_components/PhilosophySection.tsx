@@ -3,19 +3,16 @@ import Image from "next/image";
 import { philosophyContents } from "@/data/data";
 import { ContentType } from "@/typescript/types";
 import ContentCard from "@/components/ContentCard/ContentCard";
+import SectionHeading from "@/components/common/SectionHeading/SectionHeading";
 
 const PhilosophySection = () => {
   return (
     <section>
       <div className="container">
-        <div className="text-center space-y-4">
-          <h6 className="text-xs md:text-base leading-6 tracking-widest text-blue-500 font-semibold">
-            OUR PHILOSOPHY
-          </h6>
-          <h2 className="text-3xl md:text-3xl lg:text-5xl text-blue-950 font-semibold">
-            Human-centred innovation
-          </h2>
-        </div>
+        <SectionHeading
+          title="Human-centred innovation"
+          subtitle="OUR PHILOSOPHY"
+        />
         <figure className="py-8">
           <Image
             src="/images/philosophy-mob-img.avif"
