@@ -1,7 +1,14 @@
 import React from "react";
+import PhilosophySection from "./_components/PhilosophySection";
+import WaveDivider from "@/components/svg/WaveDivider";
 
 const HomePage = () => {
-  return <div className="h-[3000px]">Home Page</div>;
+  return (
+    <>
+      <WaveDivider />
+      <PhilosophySection />
+    </>
+  );
 };
 
 export default HomePage;

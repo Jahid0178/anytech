@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { Nunito } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import "./globals.css";
 
-const nunito = Nunito({
+const monserrat = Montserrat({
   subsets: ["latin"],
   variable: "--font-nunito",
   weight: ["400", "500", "600", "700", "800", "900"],
@@ -23,7 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${nunito.className} antialiased`}>{children}</body>
+      <body className={`${monserrat.className} antialiased`}>{children}</body>
     </html>
   );
 }

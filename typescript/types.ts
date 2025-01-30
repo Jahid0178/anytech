@@ -3,3 +3,10 @@ export type HeaderLink = {
   title: string;
   url: string;
 };
+
+export type ContentType = {
+  id: number | string;
+  icon: string;
+  title: string;
+  description: string;
+};
