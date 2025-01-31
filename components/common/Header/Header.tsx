@@ -12,6 +12,7 @@ import { motion } from "motion/react";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   const [isVisible, setIsVisible] = useState<boolean>(true);
+  const [isAtTop, setIsAtTop] = useState<boolean>(true);
   const prevScrollPos = React.useRef(0);
 
   const toggleMenu = () => {
@@ -27,6 +28,8 @@ const Header = () => {
         prevScrollPos.current > currentScrollPos || currentScrollPos < 100
       );
 
+      setIsAtTop(currentScrollPos === 0);
+
       prevScrollPos.current = currentScrollPos;
     };
 
@@ -36,20 +39,24 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 bg-black text-white w-full py-6 transition-all duration-300 z-20 ${
-        isVisible ? "translate-y-0" : "-translate-y-full"
+      className={`fixed top-0 left-0 right-0 ${
+        isAtTop
+          ? "bg-transparent text-white shadow-none"
+          : "bg-white text-blue-500"
+      }  w-full py-6 transition-all duration-300 z-20 ${
+        isVisible ? "translate-y-0 shadow-xl" : "-translate-y-full"
       }`}
     >
       <div className="container">
         <nav className="flex justify-between items-center gap-4">
-          <Logo variant="white" />
+          <Logo variant={isAtTop ? "white" : "blue"} />
 
           <NavLinks />
 
           <Button
             asLink={true}
             size="lg"
-            variant="outline"
+            variant={!isAtTop ? "primary" : "outline"}
             className="hidden lg:inline-flex drop-shadow-sm hover:drop-shadow-lg"
           >
             Contact Us
@@ -61,17 +68,17 @@ const Header = () => {
             aria-label="Toggle menu"
           >
             <span
-              className={`w-6 h-0.5 bg-white transition-all duration-300 ${
+              className={`w-6 h-0.5 bg-blue-500 transition-all duration-300 ${
                 isMenuOpen ? "rotate-45 translate-y-2" : ""
               }`}
             />
             <span
-              className={`w-6 h-0.5 bg-white transition-all duration-300 ${
+              className={`w-6 h-0.5 bg-blue-500 transition-all duration-300 ${
                 isMenuOpen ? "opacity-0" : ""
               }`}
             />
             <span
-              className={`w-6 h-0.5 bg-white transition-all duration-300 ${
+              className={`w-6 h-0.5 bg-blue-500 transition-all duration-300 ${
                 isMenuOpen ? "-rotate-45 -translate-y-2" : ""
               }`}
             />
@@ -114,7 +121,7 @@ const MobileNavLinks = ({
       initial={{ x: "-100%" }}
       animate={{ x: isOpen ? "0%" : "-100%" }}
       transition={{ type: "tween", duration: 0.5 }}
-      className="fixed top-0 left-0 w-full h-screen bg-black flex flex-col items-center justify-center gap-6 z-40 text-white"
+      className="fixed top-0 left-0 w-full h-screen bg-white flex flex-col items-center justify-center gap-6 z-40 text-blue-500"
     >
       <nav className="flex flex-col items-center gap-6">
         {headerLinks.map((link) => (
@@ -131,7 +138,7 @@ const MobileNavLinks = ({
       <Button
         asLink
         size="lg"
-        variant="outline"
+        variant="primary"
       >
         Contact Us
       </Button>
