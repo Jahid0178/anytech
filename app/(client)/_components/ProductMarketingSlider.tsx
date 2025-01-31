@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Thumbs } from "swiper/modules";
+import { Thumbs, Autoplay } from "swiper/modules";
 import "swiper/css/thumbs";
 import type { Swiper as SwiperType } from "swiper";
 import { productMarketingContent } from "@/data/data";
@@ -44,7 +44,11 @@ const ProductMarketingSlider = () => {
 
       <Swiper
         thumbs={{ swiper: thumbsSwiper }}
-        modules={[Thumbs]}
+        modules={[Thumbs, Autoplay]}
+        autoplay={{
+          delay: 4000,
+          disableOnInteraction: true,
+        }}
         onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
       >
         {productMarketingContent.map((content) => (
