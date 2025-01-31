@@ -11,3 +11,15 @@
     @apply py-6;
   }
 }
+
+@layer utilities {
+  .cta-clip-desktop {
+    clip-path: polygon(0 0, 100% 49%, 100% 100%, 0% 100%);
+  }
+  .cta-clip-tablet {
+    clip-path: polygon(0 0, 100% 29%, 100% 100%, 0% 100%);
+  }
+  .cta-clip-mobile {
+    clip-path: polygon(0 0, 100% 14%, 100% 100%, 0% 100%);
+  }
+}
