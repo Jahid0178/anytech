@@ -91,3 +91,107 @@ export const productMarketingContent: {
       "Join over 40 esteemed Fls, each serving more than 200 million customers, and benefit from our secure, robust and reliable infrastructure.",
   },
 ];
+
+export const trustedContent: {
+  id: string;
+  title: string;
+  subtitle: string;
+}[] = [
+  {
+    id: "1",
+    title: "20",
+    subtitle: "Years of Experience",
+  },
+  {
+    id: "2",
+    title: "40",
+    subtitle: "Financial Institutions",
+  },
+  {
+    id: "3",
+    title: "200",
+    subtitle: "Customers Each",
+  },
+];
+
+export const clientLogos: {
+  id: string;
+  title: string;
+  image: string;
+}[] = [
+  {
+    id: "1",
+    title: "Bank Of Chengde",
+    image: "/logos/logo-1.png",
+  },
+  {
+    id: "2",
+    title: "Bank Of China",
+    image: "/logos/logo-2.png",
+  },
+  {
+    id: "3",
+    title: "Bank of Shanghai",
+    image: "/logos/logo-3.png",
+  },
+  {
+    id: "4",
+    title: "CGB",
+    image: "/logos/logo-4.png",
+  },
+  {
+    id: "5",
+    title: "OneBank",
+    image: "/logos/logo-5.png",
+  },
+  {
+    id: "6",
+    title: "PING AN BANK",
+    image: "/logos/logo-6.png",
+  },
+  {
+    id: "7",
+    title: "POSTAL SAVINGS BANK OF CHINA",
+    image: "/logos/logo-7.png",
+  },
+  {
+    id: "8",
+    title: "sea",
+    image: "/logos/logo-8.png",
+  },
+  {
+    id: "9",
+    title: "Shandong City Commercial Banks Alliance",
+    image: "/logos/logo-9.png",
+  },
+  {
+    id: "10",
+    title: "VipFubon Consumer Finanace",
+    image: "/logos/logo-10.png",
+  },
+  {
+    id: "11",
+    title: "XIAMEN INTERNATIONAL BANK",
+    image: "/logos/logo-11.webp",
+  },
+  {
+    id: "12",
+    title: "XW",
+    image: "/logos/logo-12.png",
+  },
+  {
+    id: "13",
+    title: "SPD BANK",
+    image: "/logos/logo-13.png",
+  },
+  {
+    id: "14",
+    title: "DCS",
+    image: "/logos/logo-14.png",
+  },
+  {
+    id: "15",
+    title: "Bank Of Chengde",
+    image: "/logos/logo-15.png",
+  },
+];
