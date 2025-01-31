@@ -5,7 +5,7 @@ import Button from "@/components/Button/Button";
 const HeroSection = () => {
   return (
     <div className="h-[92vh] text-white relative">
-      <div className="absolute top-0 right-0 bottom-0 bg-hero-image w-[50%] h-full">
+      <div className="hidden md:block absolute top-0 right-0 bottom-0 bg-hero-image w-[50%] h-full">
         <Image
           src={"/images/hero-bg.avif"}
           alt="Hero Background"

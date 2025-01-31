@@ -23,10 +23,10 @@ function BGAnimateWrapper({ children }: { children: React.ReactNode }) {
         overflow: "hidden",
         background:
           "radial-gradient(59.82% 121.73% at -9.66% 130.31%, #00e9ea 0%, #1f80f0 52.08%, #005bc4 100%)",
-        clipPath: "polygon(0 0, 100% 0, 100% 81%, 0% 100%)",
         height: "max(620px, calc(92vh - 49px))",
         position: "relative",
       }}
+      className="hero-clip-mobile sm:hero-clip-tablet xl:hero-clip-desktop"
     >
       <svg
         className="absolute h-full hidden inset-0 lg:block object-cover w-full z-10"

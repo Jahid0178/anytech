@@ -41,7 +41,7 @@ const Header = () => {
     <header
       className={`fixed top-0 left-0 right-0 ${
         isAtTop
-          ? "bg-transparent text-white shadow-none"
+          ? "bg-transparent text-white !shadow-none"
           : "bg-white text-blue-500"
       }  w-full py-6 transition-all duration-300 z-20 ${
         isVisible ? "translate-y-0 shadow-xl" : "-translate-y-full"
