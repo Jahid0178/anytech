@@ -12,7 +12,7 @@ import Image from "next/image";
 const HomePage = () => {
   return (
     <>
-      <BGAnimateWrapper>
+      <BGAnimateWrapper sectionName="hero">
         <HeroSection />
       </BGAnimateWrapper>
       <figure
@@ -35,7 +35,9 @@ const HomePage = () => {
       <CustomerSolutionsSection />
       <WaveDivider />
       <TrustedPartnersSection />
-      <ContactBanner />
+      <BGAnimateWrapper sectionName="cta">
+        <ContactBanner />
+      </BGAnimateWrapper>
     </>
   );
 };
