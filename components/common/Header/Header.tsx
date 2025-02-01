@@ -45,7 +45,7 @@ const Header = () => {
           : "bg-white text-blue-500"
       }  w-full py-6 transition-all duration-300 z-20 ${
         isVisible ? "translate-y-0 shadow-xl" : "-translate-y-full"
-      }`}
+      } z-50`}
     >
       <div className="container">
         <nav className="flex justify-between items-center gap-4">
