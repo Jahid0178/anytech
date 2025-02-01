@@ -95,22 +95,28 @@ export const productMarketingContent: {
 export const trustedContent: {
   id: string;
   title: string;
-  subtitle: string;
+  count: number;
+  prefix?: string;
+  suffix?: string;
 }[] = [
   {
     id: "1",
-    title: "20",
-    subtitle: "Years of Experience",
+    title: "Years of Experience",
+    count: 20,
+    prefix: ">",
   },
   {
     id: "2",
-    title: "40",
-    subtitle: "Financial Institutions",
+    title: "Financial Institutions",
+    count: 40,
+    suffix: "+",
   },
   {
     id: "3",
-    title: "200",
-    subtitle: "Customers Each",
+    title: "Customers Each",
+    count: 200,
+    prefix: ">",
+    suffix: "m",
   },
 ];
 
