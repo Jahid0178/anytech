@@ -1,6 +1,7 @@
 "use client";
 
 import { motion, useMotionValue, useTransform } from "motion/react";
+import Image from "next/image";
 
 function BGAnimateWrapper({ children }: { children: React.ReactNode }) {
   const mouseX = useMotionValue(0);
@@ -722,7 +723,16 @@ function BGAnimateWrapper({ children }: { children: React.ReactNode }) {
           </linearGradient>
         </defs>
       </svg>
-      {children}
+      <div className="hidden md:block absolute top-0 right-0 bottom-0 bg-hero-image w-[50%] h-full">
+        <Image
+          src={"/images/hero-bg.avif"}
+          alt="Hero Background"
+          width={600}
+          height={600}
+          className="w-full h-full object-cover"
+        />
+      </div>
+      <div className="absolute top-0 left-0 right-0 bottom-0">{children}</div>
     </section>
   );
 }

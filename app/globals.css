@@ -49,6 +49,20 @@
   }
 }
 
+.animate-move-up-down {
+  animation: moveUpDown 8s infinite ease-in-out; /* Adjust duration as needed */
+}
+
+@keyframes moveUpDown {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
 @keyframes slideInFromLeft {
   from {
     transform: translateX(-100px) translateY(-100px);
