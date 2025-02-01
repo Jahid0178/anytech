@@ -19,11 +19,11 @@ const TrustedPartnersSection = () => {
             />
           ))}
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 justify-items-center gap-5 mt-16 lg:mt-[128px]">
+        <div className="flex overflow-x-auto overflow-y-hidden snap-x scroll-smooth snap-mandatory md:grid md:grid-cols-3 lg:grid-cols-5 justify-items-center gap-5 mt-16 lg:mt-[128px]">
           {clientLogos.map((logo) => (
             <picture
               key={logo.id}
-              className="flex justify-stretch object-cover uppercase"
+              className="flex justify-stretch object-cover uppercase snap-center flex-shrink-0 w-full items-center h-[110px]"
               title={logo.title}
             >
               <Image
@@ -31,7 +31,7 @@ const TrustedPartnersSection = () => {
                 alt={logo.title}
                 width={200}
                 height={100}
-                className="w-full h-auto object-contain"
+                className="w-full h-full object-contain"
               />
             </picture>
           ))}
