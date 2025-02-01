@@ -13,14 +13,25 @@ const InnovativeFinanceSection = () => {
             <h2 className="text-3xl lg:text-6xl font-semibold text-blue-950">
               Uncovering new ways to delight customers
             </h2>
-            <figure className="block md:hidden w-[76%] mx-auto !my-12 shadow-[0_23px_30px_0_#16437763] relative">
-              <Image
-                src="/images/customer.png"
-                alt="Customer"
-                width={600}
-                height={600}
-              />
-              <figure className="absolute top-[20%] left-[5%] animate-move-up-down">
+            <div className="block md:hidden relative">
+              <figure className="absolute top-0 left-0 right-0 bottom-0 z-0">
+                <Image
+                  src={"/svg/WaveLinesMobile2.svg"}
+                  alt="Wave line mobile"
+                  width={600}
+                  height={600}
+                  className="w-full h-full"
+                />
+              </figure>
+              <figure className="block md:hidden relative w-[76%] mx-auto !my-12 shadow-[0_23px_30px_0_#16437763] z-10">
+                <Image
+                  src="/images/customer.png"
+                  alt="Customer"
+                  width={600}
+                  height={600}
+                />
+              </figure>
+              <figure className="absolute top-[20%] left-[5%] animate-move-up-down z-20">
                 <Image
                   src={"/svg/card.svg"}
                   alt="Card"
@@ -28,7 +39,7 @@ const InnovativeFinanceSection = () => {
                   height={50}
                 />
               </figure>
-              <figure className="absolute top-[40%] left-[20%] animate-move-up-down">
+              <figure className="absolute top-[40%] left-[20%] animate-move-up-down z-20">
                 <Image
                   src={"/svg/analytics.svg"}
                   alt="Analytics"
@@ -36,7 +47,7 @@ const InnovativeFinanceSection = () => {
                   height={60}
                 />
               </figure>
-              <figure className="absolute top-[10%] right-[5%] animate-move-up-down">
+              <figure className="absolute top-[10%] right-[5%] animate-move-up-down z-20">
                 <Image
                   src={"/svg/bank.svg"}
                   alt="Bank"
@@ -44,7 +55,7 @@ const InnovativeFinanceSection = () => {
                   height={70}
                 />
               </figure>
-            </figure>
+            </div>
             <p className="text-blue-950">
               <strong>
                 AnyTech is revolutionising financial technology by introducing

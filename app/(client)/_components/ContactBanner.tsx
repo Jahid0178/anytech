@@ -4,7 +4,7 @@ import Button from "@/components/Button/Button";
 
 const ContactBanner = () => {
   return (
-    <div className="container h-full flex items-center">
+    <div className="container h-full flex items-center relative bg-[url('/svg/WaveLinesDesktop4.svg')] bg-no-repeat bg-cover">
       <div>
         <h2 className="text-3xl md:text-5xl lg:text-6xl font-semibold mb-6">
           Legacy no longer
