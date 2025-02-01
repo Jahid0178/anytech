@@ -31,13 +31,16 @@ const PhilosophySection = () => {
             className="hidden md:block w-full h-auto"
           />
         </figure>
-        <ul className="flex md:grid overflow-x-auto snap-x snap-mandatory grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[30px]">
-          {philosophyContents.map((content: ContentType) => (
+        <ul className="flex md:grid overflow-x-auto lg:overflow-hidden snap-x snap-mandatory grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[30px]">
+          {philosophyContents.map((content: ContentType, index) => (
             <li
               key={content.id}
               className="snap-center flex-shrink-0 w-full sm:w-[80%] md:w-auto"
             >
-              <ContentCard content={content} />
+              <ContentCard
+                content={content}
+                index={index}
+              />
             </li>
           ))}
         </ul>
